@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Events";
+}
+
+@model List<EventModel>
+
+<h1>Events</h1>
+
+<form method="post" action="/Event/AddEvent">
+    <input type="text" name="eventName" placeholder="Enter Event Name" />
+    <button type="submit">Add Event</button>
+</form>
+
+<ul>
+    @foreach (var event in Model)
+    {
+        <li>@event.EventName</li>
+    }
+</ul>
